@@ -1,0 +1,13 @@
+{
+  "styles": [
+    "app/src/styles/plugins/bootstrap.min.css",
+    "app/src/styles/plugins/swiper.min.css",
+    "app/src/styles/main.scss"
+  ],
+  "scripts": [
+    "app/src/scripts/jquery.min.js",
+    "app/src/scripts/svg-inject.min.js",
+    "app/src/scripts/swiper.min.js",
+    "app/src/scripts/main.js"
+  ]
+}
