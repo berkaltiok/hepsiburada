@@ -1,12 +1,19 @@
-# HepsiBurada
-HepsiBurada.com HTML/CSS Clone
+# hepsiburada
 
-## Install Project
+## Project setup
 ```
-npm install
+yarn install
 ```
 
-## Start Project
+### Compiles and hot-reloads for development
 ```
-npm run start
+yarn serve
 ```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
