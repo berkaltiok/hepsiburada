@@ -1,5 +1,5 @@
 <template>
-  <div class="searchBar cursor-text flex flex-1 w-full h-12 relative rounded-full bg-gray-100 hover:bg-white hover:shadow-search mx-8 transition-all">
+  <div class="searchBar cursor-text flex w-full h-12 relative border border-gray-200 rounded-lg lg:rounded-full bg-white lg:bg-gray-100 lg:hover:bg-white shadow-searchMobile lg:shadow-none lg:hover:shadow-search m-2 lg:my-0 lg:mx-8 transition-search">
     <!-- Search Input -->
     <label for="search" class="absolute h-full w-12 flex items-center justify-center pl-1 flex-none">
       <i class="icon icon-search"></i>
@@ -10,8 +10,8 @@
       type="text"
       id="search"
       autocomplete="off"
-      class="searchBar__input w-full h-full focus:outline-none bg-transparent text-sm font-semibold text-gray-700 text-opacity-95 z-30"
-      :class="modal ? 'pl-3.5 pr-60 open' : 'pl-12 pr-6'"
+      class="w-full h-full focus:outline-none bg-transparent font-semibold text-gray-700 text-opacity-95 z-30"
+      :class="modal ? 'pl-3.5 pr-60 open text-2xl' : 'pl-12 pr-6 text-sm'"
       @keydown="inputFocusIn"
       @focusin="inputFocusIn"
       @click="inputFocusIn"
@@ -34,9 +34,9 @@
       </div>
       <i class="icon icon-circleDismiss cursor-pointer" @click="inputClear()"></i>
     </div>
-    <div class="searchBar__modal absolute -left-4 -right-4 rounded-2xl bg-white z-20 pt-12 pb-4" v-show="modal">
-      <div class="pt-2 px-8">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ea explicabo in inventore minima, minus ut. Dolore eos, et ex, impedit laborum molestiae non odio porro quas suscipit ut vel.
+    <div v-show="modal" class="searchBar__modal absolute -left-4 -right-4 rounded-2xl bg-white z-20 pt-12 pb-4">
+      <div class="text-xs leading-4 text-gray-400 pt-2 px-8">
+        Aramaya başlamak için <strong>en az 2 karakter</strong> yazmalısınız
       </div>
     </div>
     <!-- /Search Modal -->

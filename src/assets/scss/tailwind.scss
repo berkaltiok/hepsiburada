@@ -2,13 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-.transition-all {
-  transition-timing-function: ease-in-out;
-  transition-duration: .15s;
+.transition {
+  &-search {
+    transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+  }
+  &-all, &-shadow, &-colors, &-search {
+    transition-timing-function: ease-in-out;
+    transition-duration: .15s;
+  }
 }
 
 .categoryButton {
-  @apply flex items-center text-sm; }
+  @apply items-center text-sm; }
 .categoryButton__icon {
   @apply w-12 h-12 mr-2 flex justify-center items-center rounded-full; }
 .categoryButton:hover .categoryButton__icon {

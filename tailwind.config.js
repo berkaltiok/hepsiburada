@@ -26,14 +26,27 @@ module.exports = {
           '900': '#84211e',
         }
       },
-      width: { ...grid48 },
+      width: {
+        "29": "7.125rem",
+        ...grid48
+      },
       boxShadow: {
-        search: "0 0 4px 0 rgba(0,0,0,.16)"
+        "search": "0 0 4px 0 rgba(0, 0, 0, .16)",
+        "searchMobile": "0 1px 2px 0 rgba(0, 0, 0, .12)"
       },
       lineHeight: {
-        'min': '1px',
+        "min": "1px",
+      },
+      flex: {
+        "full": "0 0 100%"
       }
     },
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1072px',
+      'xl': '1280px'
+    }
   },
   variants: {
     extend: {},
