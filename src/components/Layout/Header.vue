@@ -46,7 +46,9 @@
       <!-- /Actions -->
 
       <!-- Profile -->
-      <div class="h-12 w-12 ml-8 bg-gray-100 hover:bg-orange-500 hover:bg-opacity-10 hover:text-orange-500 rounded-full text-base flex items-center justify-center cursor-pointer transition-all">BA</div>
+      <div class="h-12 w-12 ml-8 bg-gray-100 hover:bg-orange-500 hover:bg-opacity-10 hover:text-orange-500 text-gray-700 rounded-full flex items-center justify-center cursor-pointer transition-all">
+        <span class="leading-min text-base">BA</span>
+      </div>
       <!-- /Profile -->
     </div>
     <div class="h-2 flex">
