@@ -6,6 +6,7 @@ for (let i = 1; i < 48; i++) {
 module.exports = {
   purge: [
     './src/**/*.html',
+    './src/**/*.vue',
     './src/**/*.js',
   ],
   darkMode: "class",
