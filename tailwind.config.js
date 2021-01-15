@@ -28,6 +28,9 @@ module.exports = {
       width: { ...grid48 },
       boxShadow: {
         search: "0 0 4px 0 rgba(0,0,0,.16)"
+      },
+      lineHeight: {
+        'min': '1px',
       }
     },
   },
