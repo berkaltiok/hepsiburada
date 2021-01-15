@@ -21,15 +21,7 @@
       <!-- /Category Button -->
 
       <!-- Search -->
-      <label for="search" class="cursor-text flex flex-1 w-full h-12 relative rounded-full bg-gray-100 hover:bg-white hover:shadow-search mx-8 transition-all overflow-hidden">
-        <span class="w-12 flex items-center justify-center pl-1 z-10 flex-none">
-          <i class="icon icon-search"></i>
-        </span>
-        <input type="text" id="search" class="searchBar__input focus:outline-none bg-transparent flex-1 text-sm font-semibold text-black text-opacity-95 z-30 pl-0" required autocomplete="off">
-        <span class="searchBar__placeholder left-12 absolute z-0 h-full top-0 flex items-center text-sm text-gray-400 w-38 orange-500 w-full overflow-hidden">
-          <span class="whitespace-nowrap">Ürün, kategori veya marka ara</span>
-        </span>
-      </label>
+      <Search/>
       <!-- /Search -->
 
       <!-- Actions -->
@@ -42,11 +34,18 @@
           <i class="icon icon-box"></i>
           <span class="text-gray-700 text-sm font-semibold ml-3.5">Siparişlerim</span>
         </router-link>
+        <router-link to="/" v-if="!$store.state.isLogin" class="flex items-center px-4 rounded-full hover:bg-gray-100 h-12 transition-all">
+          <i class="icon icon-user"></i>
+          <span class="text-gray-700 text-sm font-semibold ml-3.5">Hesabım</span>
+        </router-link>
       </div>
       <!-- /Actions -->
 
       <!-- Profile -->
-      <div class="h-12 w-12 ml-8 bg-gray-100 hover:bg-orange-500 hover:bg-opacity-10 hover:text-orange-500 text-gray-700 rounded-full flex items-center justify-center cursor-pointer transition-all">
+      <div
+        v-if="$store.state.isLogin"
+        class="h-12 w-12 ml-8 bg-gray-100 hover:bg-orange-500 hover:bg-opacity-10 hover:text-orange-500 text-gray-700 rounded-full flex items-center justify-center cursor-pointer transition-all"
+      >
         <span class="leading-min text-base">BA</span>
       </div>
       <!-- /Profile -->
@@ -63,8 +62,12 @@
 </template>
 
 <script>
-  export default {
+  import Search from "@/components/Layout/Header/Search";
 
+  export default {
+    components: {
+      Search
+    },
   }
 </script>
 
