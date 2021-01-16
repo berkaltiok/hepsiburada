@@ -2,6 +2,7 @@
   <div
     ref="searchBar"
     tabindex="0"
+    v-on-clickaway="inputFocusOut"
     class="searchBar focus:outline-none cursor-text flex w-full h-12 relative border border-gray-200 lg:border-0 rounded-lg lg:rounded-full bg-white lg:bg-gray-100 lg:hover:bg-white shadow-searchMobile lg:shadow-none lg:hover:shadow-search m-2 lg:my-0 lg:mx-8 transition-search"
   >
     <!-- Search Input -->
@@ -48,7 +49,10 @@
 </template>
 
 <script>
+  import { mixin as clickaway } from 'vue-clickaway';
+
   export default {
+    mixins: [ clickaway ],
     data() {
       return {
         input: "",
