@@ -16,6 +16,7 @@
     <!-- Modal Content -->
     <div class="container mx-auto">
       <div class="mt-6 text-center text-gray-500 text-2xl">
+        <!-- TODO: Set SF Pro Display font -->
         Her ihtiyacına uygun 25 milyondan fazla ürün çeşidi burada!
       </div>
       <div class="flex flex-wrap justify-center mt-10">
@@ -84,6 +85,10 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  .categoryButton {
+    &:hover > &__icon {
+      @apply bg-gray-100;
+    }
+  }
 </style>
