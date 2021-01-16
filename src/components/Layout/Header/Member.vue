@@ -7,7 +7,6 @@
     >
       <span class="leading-min text-sm lg:text-base font-bold lg:font-normal">BA</span>
     </div>
-    <!-- /Member Login -->
 
     <!-- Member Not Login -->
     <div
@@ -17,6 +16,5 @@
       <i class="icon icon-user"></i>
       <span class="hidden lg:block text-gray-700 text-sm font-semibold ml-3.5">Hesabım</span>
     </div>
-    <!-- /Member Not Login -->
   </div>
 </template>
