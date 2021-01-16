@@ -1,5 +1,5 @@
 <template>
-  <div class="searchBar cursor-text flex w-full h-12 relative border border-gray-200 rounded-lg lg:rounded-full bg-white lg:bg-gray-100 lg:hover:bg-white shadow-searchMobile lg:shadow-none lg:hover:shadow-search m-2 lg:my-0 lg:mx-8 transition-search">
+  <div class="searchBar cursor-text flex w-full h-12 relative border border-gray-200 lg:border-0 rounded-lg lg:rounded-full bg-white lg:bg-gray-100 lg:hover:bg-white shadow-searchMobile lg:shadow-none lg:hover:shadow-search m-2 lg:my-0 lg:mx-8 transition-search">
     <!-- Search Input -->
     <label for="search" class="absolute h-full w-12 flex items-center justify-center pl-1 flex-none">
       <i class="icon icon-search"></i>

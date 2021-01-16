@@ -12,43 +12,16 @@
       <!-- /Logo -->
 
       <!-- Category Button -->
-      <div class="categoryButton focus:outline-none cursor-pointer hidden lg:flex">
-        <span class="categoryButton__icon transition-all">
-          <i class="icon icon-category"></i>
-        </span>
-        <span class="text-gray-700 font-semibold">Kategoriler</span>
-      </div>
-      <!-- /Category Button -->
+      <Category class="hidden lg:flex"/>
 
       <!-- Search -->
       <Search class="flex-auto lg:flex-1 order-last lg:order-none"/>
-      <!-- /Search -->
 
       <!-- Actions -->
-      <div class="hidden lg:flex">
-        <router-link to="/" class="flex items-center px-4 rounded-full hover:bg-gray-100 h-12 transition-all">
-          <i class="icon icon-cart"></i>
-          <span class="text-gray-700 text-sm font-semibold ml-3.5">Sepetim</span>
-        </router-link>
-        <router-link to="/" class="flex items-center px-4 rounded-full hover:bg-gray-100 h-12 transition-all">
-          <i class="icon icon-box"></i>
-          <span class="text-gray-700 text-sm font-semibold ml-3.5">Siparişlerim</span>
-        </router-link>
-        <router-link to="/" v-if="!$store.state.isLogin" class="flex items-center px-4 rounded-full hover:bg-gray-100 h-12 transition-all">
-          <i class="icon icon-user"></i>
-          <span class="text-gray-700 text-sm font-semibold ml-3.5">Hesabım</span>
-        </router-link>
-      </div>
-      <!-- /Actions -->
+      <Actions class="hidden lg:flex"/>
 
       <!-- Profile -->
-      <div
-        v-if="$store.state.isLogin"
-        class="h-10 lg:h-12 w-10 lg:w-12 ml-2 lg:ml-8 flex-none bg-gray-100 hover:bg-orange-500 hover:bg-opacity-10 hover:text-orange-500 text-gray-700 rounded-full flex items-center justify-center cursor-pointer transition-all"
-      >
-        <span class="leading-min text-sm lg:text-base font-bold lg:font-normal">BA</span>
-      </div>
-      <!-- /Profile -->
+      <Member class="ml-2 lg:ml-0"/>
     </div>
     <div class="h-2 hidden lg:flex">
       <div class="w-5/48 h-full bg-purple-700"></div>
@@ -63,10 +36,16 @@
 
 <script>
   import Search from "@/components/Layout/Header/Search";
+  import Member from "@/components/Layout/Header/Member";
+  import Actions from "@/components/Layout/Header/Actions";
+  import Category from "@/components/Layout/Header/Category";
 
   export default {
     components: {
-      Search
+      Category,
+      Search,
+      Actions,
+      Member
     },
   }
 </script>
