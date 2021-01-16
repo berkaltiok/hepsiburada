@@ -1,5 +1,9 @@
 <template>
-  <div class="searchBar cursor-text flex w-full h-12 relative border border-gray-200 lg:border-0 rounded-lg lg:rounded-full bg-white lg:bg-gray-100 lg:hover:bg-white shadow-searchMobile lg:shadow-none lg:hover:shadow-search m-2 lg:my-0 lg:mx-8 transition-search">
+  <div
+    ref="searchBar"
+    tabindex="0"
+    class="searchBar focus:outline-none cursor-text flex w-full h-12 relative border border-gray-200 lg:border-0 rounded-lg lg:rounded-full bg-white lg:bg-gray-100 lg:hover:bg-white shadow-searchMobile lg:shadow-none lg:hover:shadow-search m-2 lg:my-0 lg:mx-8 transition-search"
+  >
     <!-- Search Input -->
     <label for="search" class="absolute h-full w-12 flex items-center justify-center pl-1 flex-none">
       <i class="icon icon-search"></i>
@@ -56,6 +60,7 @@
         this.modal = true;
       },
       inputFocusOut() {
+        this.$refs.searchBar.focus();
         this.modal = false;
       },
       inputClear() {
