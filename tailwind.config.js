@@ -39,6 +39,27 @@ module.exports = {
       },
       flex: {
         "full": "0 0 100%"
+      },
+      zIndex: {
+        "100": 100,
+      },
+      backgroundOpacity: {
+        '15': '0.15'
+      },
+      keyframes: {
+        slideButton: {
+          "0%": {
+            opacity: ".5",
+            transform: "translateX(150px)"
+          },
+          "to": {
+            opacity: "1",
+            transform: "translateX(0)"
+          }
+        }
+      },
+      animation: {
+        'slideButton': 'slideButton .15s ease-in-out',
       }
     },
     screens: {
