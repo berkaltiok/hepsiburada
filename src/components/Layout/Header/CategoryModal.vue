@@ -48,7 +48,7 @@
       <div class="mt-4 w-56 h-full">
         <div class="min-h-15 font-bold text-lg flex items-center pl-6 pr-4 text-gray-600 leading-5">
           {{ categories.step1[activeCategories.step1].title }}
-          <i class="icon icon-rightArrow w-2 ml-auto flex-none ml-2"></i>
+          <i class="icon icon-rightAngle w-2 ml-auto flex-none ml-2"></i>
         </div>
         <div class="border-r border-gray-100 h-full">
           <ul class="w-full px-2 pb-2">
@@ -60,10 +60,68 @@
               >
                 {{ item.name }}
                 <i
-                  class="icon icon-rightArrow w-1.3 ml-auto"
+                  class="icon icon-rightAngle w-1.3 ml-auto"
                   :class="{'hovered' : activeCategories.step2 === key }"
                 ></i>
               </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4 w-56 h-full" v-if="activeCategories.step2 !== null">
+        <div class="min-h-15 font-bold text-lg flex items-center pl-6 pr-4 text-gray-600 leading-5">
+          {{ categories.step2[activeCategories.step2].name }}
+          <i class="icon icon-rightAngle w-2 ml-auto flex-none ml-2"></i>
+        </div>
+        <div class="border-r border-gray-100 h-full">
+          <ul class="w-full px-2 pb-2">
+            <router-link
+              to="#"
+              tag="li"
+              class="categoryAll cursor-pointer mx-4 font-medium text-sm leading-tight border-b border-gray-200 hover:text-orange-500 transition-all h-12 flex items-center"
+            >
+              Tümünü Gör
+              <i class="icon icon-rightArrow w-3 ml-2 transition-all"></i>
+            </router-link>
+            <template v-for="(item, key) in categories.step3">
+              <li
+                class="categoryItem min-h-12 py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
+                :class="{'text-orange-500 bg-orange-500 bg-opacity-10' : activeCategories.step3 === key }"
+                @click="selectCategory(4, key)"
+              >
+                {{ item.name }}
+                <i
+                  class="icon icon-rightAngle w-1.3 ml-auto"
+                  :class="{'hovered' : activeCategories.step3 === key }"
+                ></i>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-4 w-56 h-full" v-if="activeCategories.step3 !== null">
+        <div class="min-h-15 font-bold text-lg flex items-center pl-6 pr-4 text-gray-600 leading-5">
+          {{ categories.step3[activeCategories.step3].name }}
+          <i class="icon icon-rightAngle w-2 ml-auto flex-none ml-2"></i>
+        </div>
+        <div class="border-r border-gray-100 h-full">
+          <ul class="w-full px-2 pb-2">
+            <router-link
+              to="#"
+              tag="li"
+              class="categoryAll cursor-pointer mx-4 font-medium text-sm leading-tight border-b border-gray-200 hover:text-orange-500 transition-all h-12 flex items-center"
+            >
+              Tümünü Gör
+              <i class="icon icon-rightArrow w-3 ml-2 transition-all"></i>
+            </router-link>
+            <template v-for="(item, key) in categories.step4">
+              <router-link
+                to="#"
+                tag="li"
+                class="categoryItem min-h-12 py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
+              >
+                {{ item.name }}
+              </router-link>
             </template>
           </ul>
         </div>
@@ -152,12 +210,61 @@
               name: "Oyun & Oyun Konsolları",
               type: "category"
             }
+          ],
+          step3: [
+            {
+              name: "Yazıcılar",
+              type: "category"
+            },
+            {
+              name: "Sarf Malzemeleri",
+              type: "category"
+            },
+            {
+              name: "Tüm Kategoriler",
+              type: "category"
+            },
+            {
+              name: "Projeksiyon Cihazı",
+              type: "category"
+            },
+            {
+              name: "Projeksiyon Ekipmanları",
+              type: "category"
+            },
+            {
+              name: "Yurt Dışından",
+              type: "category"
+            }
+          ],
+          step4: [
+            {
+              name: "Toner",
+              type: "link"
+            },
+            {
+              name: "Kartuş",
+              type: "link"
+            },
+            {
+              name: "Drum",
+              type: "link"
+            },
+            {
+              name: "Şerit",
+              type: "link"
+            },
+            {
+              name: "Yazıcı Kağıdı",
+              type: "link"
+            }
           ]
         },
         stepCategories: 0,
         activeCategories: {
           step1: null,
-          step2: null
+          step2: null,
+          step3: null
         }
       }
     },
@@ -196,6 +303,12 @@
     }
     &:hover i, i.hovered {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='%23ff6000'%3E%3Cpath d='M7.75 6c0 .33-.142.646-.39.864L1.784 11.77a.924.924 0 01-1.22-1.386l4.877-4.29a.125.125 0 000-.188L.564 1.616A.924.924 0 011.784.23l5.574 4.904c.249.219.392.534.392.866z'/%3E%3C/svg%3E");
+    }
+  }
+  .categoryAll {
+    &:hover i {
+      @apply transform translate-x-1;
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11' stroke='%23ff6000' fill='none'%3E%3Cpath d='M.375 5.5h11.25m-5.25 5.25l5.25-5.25L6.375.25' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'/%3E%3C/svg%3E");
     }
   }
 </style>

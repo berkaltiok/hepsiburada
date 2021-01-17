@@ -13,6 +13,9 @@
 
   &.icon {
     &-rightArrow {
+      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11' stroke='%23484848' fill='none'%3E%3Cpath d='M.375 5.5h11.25m-5.25 5.25l5.25-5.25L6.375.25' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'/%3E%3C/svg%3E");
+    }
+    &-rightAngle {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='%23484848'%3E%3Cpath d='M7.75 6c0 .33-.142.646-.39.864L1.784 11.77a.924.924 0 01-1.22-1.386l4.877-4.29a.125.125 0 000-.188L.564 1.616A.924.924 0 011.784.23l5.574 4.904c.249.219.392.534.392.866z'/%3E%3C/svg%3E");
     }
     &-user {
