@@ -4,9 +4,9 @@
     <div class="h-24 px-6 flex" :class="{ 'border-b border-gray-200' : stepCategories > 0 }">
       <div
         @click="closeModal"
-        class="categoryButton animate-slideButton flex focus:outline-none cursor-pointer items-center text-sm"
+        class="group animate-slideButton flex focus:outline-none cursor-pointer items-center text-sm"
       >
-        <div class="categoryButton__icon bg-orange-500 bg-opacity-10 w-12 h-12 mr-2 flex justify-center items-center rounded-full transition-all">
+        <div class="group-hover:bg-gray-100 bg-orange-500 bg-opacity-10 w-12 h-12 mr-2 flex justify-center items-center rounded-full transition-all">
           <i class="icon icon-categoryClose"></i>
         </div>
         <div class="text-orange-500 font-semibold">Kategoriler</div>
@@ -78,10 +78,10 @@
             <router-link
               to="#"
               tag="li"
-              class="categoryAll cursor-pointer mx-4 font-medium text-sm leading-tight border-b border-gray-200 hover:text-orange-500 transition-all h-12 flex items-center"
+              class="categoryAll group cursor-pointer mx-4 font-medium text-sm leading-tight border-b border-gray-200 hover:text-orange-500 transition-all h-12 flex items-center"
             >
               Tümünü Gör
-              <i class="icon icon-rightArrow w-3 ml-2 transition-all"></i>
+              <i class="icon icon-rightArrow w-3 ml-2 transition-all transform group-hover:translate-x-1"></i>
             </router-link>
             <template v-for="(item, key) in categories.step3">
               <li
@@ -109,10 +109,10 @@
             <router-link
               to="#"
               tag="li"
-              class="categoryAll cursor-pointer mx-4 font-medium text-sm leading-tight border-b border-gray-200 hover:text-orange-500 transition-all h-12 flex items-center"
+              class="categoryAll group cursor-pointer mx-4 font-medium text-sm leading-tight border-b border-gray-200 hover:text-orange-500 transition-all h-12 flex items-center"
             >
               Tümünü Gör
-              <i class="icon icon-rightArrow w-3 ml-2 transition-all"></i>
+              <i class="icon icon-rightArrow w-3 ml-2 transition-all transform group-hover:translate-x-1"></i>
             </router-link>
             <template v-for="(item, key) in categories.step4">
               <router-link
@@ -281,11 +281,6 @@
 </script>
 
 <style scoped lang="scss">
-  .categoryButton {
-    &:hover > &__icon {
-      @apply bg-gray-100;
-    }
-  }
   .categoryList {
     &::after {
       @apply flex bottom-0 absolute top-0 bg-transparent transition-all;
@@ -298,17 +293,11 @@
     }
   }
   .categoryItem {
-    i {
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='%23484848'%3E%3Cpath d='M7.75 6c0 .33-.142.646-.39.864L1.784 11.77a.924.924 0 01-1.22-1.386l4.877-4.29a.125.125 0 000-.188L.564 1.616A.924.924 0 011.784.23l5.574 4.904c.249.219.392.534.392.866z'/%3E%3C/svg%3E");
-    }
     &:hover i, i.hovered {
       background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 12' fill='%23ff6000'%3E%3Cpath d='M7.75 6c0 .33-.142.646-.39.864L1.784 11.77a.924.924 0 01-1.22-1.386l4.877-4.29a.125.125 0 000-.188L.564 1.616A.924.924 0 011.784.23l5.574 4.904c.249.219.392.534.392.866z'/%3E%3C/svg%3E");
     }
   }
-  .categoryAll {
-    &:hover i {
-      @apply transform translate-x-1;
-      background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11' stroke='%23ff6000' fill='none'%3E%3Cpath d='M.375 5.5h11.25m-5.25 5.25l5.25-5.25L6.375.25' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'/%3E%3C/svg%3E");
-    }
+  .categoryAll:hover i {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 11' stroke='%23ff6000' fill='none'%3E%3Cpath d='M.375 5.5h11.25m-5.25 5.25l5.25-5.25L6.375.25' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke-width='.75'/%3E%3C/svg%3E");
   }
 </style>
