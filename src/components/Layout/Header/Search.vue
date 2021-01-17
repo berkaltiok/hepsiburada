@@ -29,30 +29,21 @@
     >
       <span class="whitespace-nowrap">Ürün, kategori veya marka ara</span>
     </div>
-    <!-- /Search Input -->
 
     <!-- Search Modal -->
-    <div v-show="input && modal" class="h-12 absolute z-50 h-full top-0 right-3 inline-flex items-center text-sm text-gray-400 w-38 orange-500 overflow-hidden">
-      <div class="flex items-center mr-4 text-xs cursor-default">
-        Aramak için enter'a bas
-        <i class="icon icon-keyboardReturn ml-1.5"></i>
-      </div>
-      <i class="icon icon-circleDismiss cursor-pointer" @click="inputClear()"></i>
-    </div>
-    <div v-show="modal" class="searchBar__modal absolute -left-4 -right-4 rounded-2xl bg-white z-20 pt-12 pb-4">
-      <div class="text-xs leading-4 text-gray-400 pt-2 px-8">
-        Aramaya başlamak için <strong>en az 2 karakter</strong> yazmalısınız
-      </div>
-    </div>
-    <!-- /Search Modal -->
+    <SearchModal :input="input" :open="modal" @clear="inputClear"/>
   </div>
 </template>
 
 <script>
   import { mixin as clickaway } from 'vue-clickaway';
+  import SearchModal from "@/components/Layout/Header/SearchModal";
 
   export default {
     mixins: [ clickaway ],
+    components: {
+      SearchModal
+    },
     data() {
       return {
         input: "",
@@ -74,12 +65,3 @@
     },
   }
 </script>
-
-<style scoped lang="scss">
-  .searchBar {
-    &__modal {
-      top: -1px;
-      box-shadow: 0 2px 16px 0 rgba(0,0,0,.08);
-    }
-  }
-</style>
