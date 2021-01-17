@@ -28,7 +28,12 @@ module.exports = {
       },
       width: {
         "29": "7.125rem",
+        "1.3": "0.3125rem",
         ...grid48
+      },
+      minHeight: {
+        "12": "3rem",
+        "15": "3.75rem"
       },
       boxShadow: {
         "search": "0 0 4px 0 rgba(0, 0, 0, .16)",
