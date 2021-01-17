@@ -3,9 +3,9 @@
     <!-- Category Modal Button -->
     <div
       @click="openCategory = !openCategory"
-      class="categoryButton flex focus:outline-none cursor-pointer items-center text-sm"
+      class="group flex focus:outline-none cursor-pointer items-center text-sm"
     >
-      <div class="categoryButton__icon w-12 h-12 mr-2 flex justify-center items-center rounded-full transition-all">
+      <div class="group-hover:bg-gray-100 w-12 h-12 mr-2 flex justify-center items-center rounded-full transition-all">
         <i class="icon icon-category"></i>
       </div>
       <div class="text-gray-700 font-semibold">Kategoriler</div>
@@ -38,11 +38,3 @@
     }
   }
 </script>
-
-<style scoped lang="scss">
-  .categoryButton {
-    &:hover > &__icon {
-      @apply bg-gray-100;
-    }
-  }
-</style>

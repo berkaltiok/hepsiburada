@@ -17,11 +17,11 @@
                 tag="li"
                 role="option"
                 aria-selected="false"
-                class="searchModal__category flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
+                class="group flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
               >
                 <span class="text-gray-700 text-opacity-95 text-sm leading-4" v-html="highlightText(input, list.name)"/>
                 <i class="icon icon-arrowRight mx-2 mt-0.5"></i>
-                <span class="text-gray-500 text-xs leading-4"><strong>{{ item.name }}</strong> içinde ara</span>
+                <span class="text-gray-500 text-xs leading-4"><strong class="group-hover:text-orange-500">{{ item.name }}</strong> içinde ara</span>
               </router-link>
             </template>
           </template>
@@ -159,11 +159,6 @@
 
 <style scoped lang="scss">
   .searchModal {
-    &__category {
-      &:hover strong {
-        @apply text-orange-500;
-      }
-    }
     &__card {
       top: -1px;
       box-shadow: 0 2px 16px 0 rgba(0,0,0,.08);
