@@ -1,19 +1,46 @@
-# hepsiburada
+<p align="center"><img width="200" src="https://i.ibb.co/7zmB4gG/hepsisurada.png" alt="Hepsişurada logo"></p>
+<p align="center">
+  Hepsiburada.com clone in VueJS / TailwindCSS / CSS.
+</p>
+<p align="center">
+  <img src="https://img.shields.io/maintenance/yes/2021?style=for-the-badge" alt="Maintained">
+  <a href="https://github.com/berkaltiok/hepsiburada/blob/dev/LICENSE"><img src="https://img.shields.io/github/license/berkaltiok/hepsiburada?sanitize=true&style=for-the-badge" alt="License"></a>
+</p>
 
-## Project setup
-```
-yarn install
+---
+
+# Project Setup
+
+Always use <a href="https://yarnpkg.com/">yarn</a> to avoid conflicting .lock file issues.
+
+### Install
+
+First, install all packages with `yarn`:
+
+```bash
+yarn
 ```
 
-### Compiles and hot-reloads for development
-```
+### Development
+
+For starting to development, use this command:
+
+```bash
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
+### Build
+
+For production-ready build, use this command:
+
+```bash
 yarn build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# Contributing
+
+Merge requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+# License
+
+This project is licensed under the GPLv3 License - see the [LICENSE](LICENSE) file for details.
