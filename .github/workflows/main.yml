@@ -30,3 +30,4 @@ jobs:
           BRANCH: dist
           FOLDER: dist
           CLEAN: true
+          CLEAN_EXCLUDE: '["CNAME"]'
