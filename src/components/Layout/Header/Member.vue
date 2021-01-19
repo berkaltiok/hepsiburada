@@ -122,7 +122,7 @@
     data() {
       return {
         menu: {
-          isOpen: true,
+          isOpen: false,
           links: [
             {
               link: "#",
