@@ -31,6 +31,9 @@ module.exports = {
         "1.3": "0.3125rem",
         ...grid48
       },
+      height: {
+        "15": "3.75rem"
+      },
       minHeight: {
         "12": "3rem",
         "15": "3.75rem"
@@ -38,7 +41,8 @@ module.exports = {
       boxShadow: {
         "search": "0 0 4px 0 rgba(0, 0, 0, .16)",
         "searchMobile": "0 1px 2px 0 rgba(0, 0, 0, .12)",
-        "categoryCard": "0 8px 32px 0 #eee"
+        "categoryCard": "0 8px 32px 0 #eee",
+        "memberMenu": "0 2px 8px 0 rgba(72, 72, 72, .32)"
       },
       lineHeight: {
         "min": "1px",
@@ -50,6 +54,7 @@ module.exports = {
         "100": 100,
       },
       backgroundOpacity: {
+        "8": ".08",
         '15': '0.15'
       },
       keyframes: {
