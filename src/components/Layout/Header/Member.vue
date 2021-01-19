@@ -26,7 +26,7 @@
       v-show="menu.isOpen"
       class="absolute right-0 w-72 rounded-lg shadow-memberMenu mt-2 text-sm z-10 bg-white"
     >
-      <div class="flex space-x-2 p-4">
+      <div class="flex space-x-2 p-4" v-if="!$store.state.isLogin">
         <template v-for="item in menu.auth">
           <router-link
             :to="item.link"
