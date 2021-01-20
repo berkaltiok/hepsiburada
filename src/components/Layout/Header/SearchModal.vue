@@ -1,14 +1,14 @@
 <template>
   <div class="searchModal cursor-auto">
-    <div v-show="input.length > 1 && open" class="h-12 absolute z-50 h-full top-0 right-2 inline-flex items-center text-sm text-gray-400 w-38 orange-500 overflow-hidden">
+    <div v-show="value.length > 1 && open" class="h-12 absolute z-50 h-full top-0 right-2 inline-flex items-center text-sm text-gray-400 w-38 orange-500 overflow-hidden">
       <div class="flex items-center mr-4 text-xs cursor-default">
         Aramak için enter'a bas
         <i class="icon icon-keyboardReturn ml-1.5"></i>
       </div>
-      <i class="icon icon-circleDismiss cursor-pointer" @click="$emit('clear', true)"></i>
+      <i class="icon icon-circleDismiss cursor-pointer" @click="$emit('input', '')"></i>
     </div>
     <div v-show="open" class="searchModal__card absolute -left-4 -right-4 rounded-2xl bg-white z-20 pt-12 pb-4">
-      <div v-if="input.length > 1">
+      <div v-if="value.length > 1">
         <ul class="pr-4 pl-4 pb-4 focus:outline-none" tabindex="-1" role="listbox">
           <template v-for="list in getCategory">
             <template v-for="item in list.categories">
@@ -19,7 +19,7 @@
                 aria-selected="false"
                 class="group flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
               >
-                <span class="text-gray-700 text-opacity-95 text-sm leading-4" v-html="highlightText(input, list.name)"/>
+                <span class="text-gray-700 text-opacity-95 text-sm leading-4" v-html="highlightText(value, list.name)"/>
                 <i class="icon icon-arrowRight mx-2 mt-0.5"></i>
                 <span class="text-gray-500 text-xs leading-4"><strong class="group-hover:text-orange-500">{{ item.name }}</strong> içinde ara</span>
               </router-link>
@@ -33,7 +33,7 @@
               aria-selected="false"
               class="flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
             >
-              <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4" v-html="highlightText(input, item.name)"/>
+              <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4" v-html="highlightText(value, item.name)"/>
               <span class="ml-8 text-gray-500 text-opacity-80 leading-4 font-semibold text-xs">Marka</span>
             </router-link>
           </template>
@@ -45,7 +45,7 @@
               aria-selected="false"
               class="flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
             >
-              <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4" v-html="highlightText(input, item.name)"/>
+              <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4" v-html="highlightText(value, item.name)"/>
             </router-link>
           </template>
           <template v-for="item in suggestions.page">
@@ -76,9 +76,8 @@
 <script>
   export default {
     props: {
-      input: {
+      value: {
         type: String,
-        required: true
       },
       open: {
         type: Boolean,

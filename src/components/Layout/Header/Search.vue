@@ -31,7 +31,7 @@
     </div>
 
     <!-- Search Modal -->
-    <SearchModal :input="input" :open="modal" @clear="inputClear"/>
+    <SearchModal v-model="input" :open="modal" @input="inputFocus"/>
   </div>
 </template>
 
@@ -58,8 +58,7 @@
         this.$refs.searchBar.focus();
         this.modal = false;
       },
-      inputClear() {
-        this.input = "";
+      inputFocus() {
         this.$refs.searchInput.focus();
       }
     },
