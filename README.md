@@ -37,6 +37,12 @@ For production-ready build, use this command:
 yarn build
 ```
 
+# Planned Features
+- [x] New Header
+- [ ] Product Cards
+- [ ] Home Slider
+- [ ] Footer
+
 # Contributing
 
 Merge requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
