@@ -7,7 +7,7 @@
       :class="{ 'bg-orange-500 bg-opacity-10 text-orange-500': menu.isOpen }"
       @click="toggleMenu"
     >
-      <span class="leading-min text-sm lg:text-base font-bold lg:font-normal">BA</span>
+      <span class="leading-[1px] text-sm lg:text-base font-bold lg:font-normal">BA</span>
     </div>
 
     <!-- Member Not Login -->
@@ -40,7 +40,7 @@
       <router-link
         to="#"
         tag="div"
-        class="h-15 flex items-center cursor-pointer w-full"
+        class="h-[3.75rem] flex items-center cursor-pointer w-full"
         :class="$store.state.isLogin ? 'pl-6 pr-4 bg-gray-100 justify-between bg-gray-100' : 'justify-center bg-white border-t border-b border-gray-200'"
       >
         <svg xmlns='http://www.w3.org/2000/svg' width='100' height='29' fill='#595956'>

@@ -1,8 +1,3 @@
-let grid48 = {};
-for (let i = 1; i < 48; i++) {
-  grid48[`${i}/48`] = (100/48)*i + "%";
-}
-
 module.exports = {
   mode: 'jit',
   purge: [
@@ -12,12 +7,7 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      margin: {
-        "1.3": "0.3125rem"
-      },
-      fontSize: {
-        "2xs": "11px"
-      },
+      fontSize: {},
       colors: {
         orange: {
           '50':  '#fbf7f2',
@@ -26,35 +16,25 @@ module.exports = {
           '300': '#f7bc91',
           '400': '#f78f51',
           '500': '#ff6000',
+          '550': '#e35600',
           '600': '#ed421b',
           '700': '#cd311e',
           '800': '#a52820',
           '900': '#84211e',
         }
       },
-      width: {
-        "15": "3.75rem",
-        "29": "7.125rem",
-        "1.3": "0.3125rem",
-        ...grid48
-      },
+      width: {},
       height: {
-        "15": "3.75rem",
         "screen": "var(--app-height, 100vh)"
       },
-      minHeight: {
-        "12": "3rem",
-        "15": "3.75rem"
-      },
+      minHeight: {},
       boxShadow: {
         "search": "0 0 4px 0 rgba(0, 0, 0, .16)",
         "searchMobile": "0 1px 2px 0 rgba(0, 0, 0, .12)",
         "categoryCard": "0 8px 32px 0 rgba(238, 238, 238, 1)",
         "memberMenu": "0 2px 8px 0 rgba(72, 72, 72, .32)"
       },
-      lineHeight: {
-        "min": "1px",
-      },
+      lineHeight: {},
       flex: {
         "full": "0 0 100%"
       },

@@ -46,7 +46,7 @@
             </template>
           </ul>
           <template v-if="step.type !== 'mainCategory' && steps['step'+index].active !== null">
-            <div class="min-h-15 font-bold text-lg flex items-center pl-6 pr-4 text-gray-600 leading-5">
+            <div class="min-h-[3.75rem] font-bold text-lg flex items-center pl-6 pr-4 text-gray-600 leading-5">
               {{ steps['step'+index].list[steps['step'+index].active].title }}
               <i class="icon icon-rightAngle w-2 ml-auto flex-none ml-2"></i>
             </div>
@@ -63,13 +63,13 @@
               <template v-for="(item, key) in step.list">
                 <li
                   v-if="step.type !== 'link'"
-                  class="categoryItem min-h-12 py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
+                  class="categoryItem min-h-[3rem] py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
                   :class="{'text-orange-500 bg-orange-500 bg-opacity-10' : step.active === key }"
                   @click="selectCategory(index + 1, key)"
                 >
                   {{ item.title }}
                   <i
-                    class="icon icon-rightAngle w-1.3 ml-auto"
+                    class="icon icon-rightAngle w-[.3125rem] ml-auto"
                     :class="{'hovered' : step.active === key }"
                   ></i>
                 </li>

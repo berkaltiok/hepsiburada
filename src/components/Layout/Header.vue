@@ -18,12 +18,12 @@
       <Member class="ml-2 lg:ml-0"/>
     </div>
     <div class="h-2 hidden lg:flex">
-      <div class="w-5/48 h-full bg-purple-700"></div>
-      <div class="w-9/48 bg-blue-400"></div>
-      <div class="w-15/48 bg-orange-500"></div>
-      <div class="w-7/48 h-full bg-yellow-500"></div>
-      <div class="w-6/48 h-full bg-pink-900"></div>
-      <div class="w-6/48 h-full bg-green-400"></div>
+      <div class="w-[11%] h-full bg-purple-700"></div>
+      <div class="w-[18%] bg-blue-400"></div>
+      <div class="w-[31%] bg-orange-500"></div>
+      <div class="w-[15%] h-full bg-yellow-500"></div>
+      <div class="w-[13%] h-full bg-pink-900"></div>
+      <div class="w-[12%] h-full bg-green-400"></div>
     </div>
   </header>
 </template>
