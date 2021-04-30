@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   purge: [
@@ -21,7 +23,8 @@ module.exports = {
           '700': '#cd311e',
           '800': '#a52820',
           '900': '#84211e',
-        }
+        },
+        gray: colors.warmGray
       },
       width: {},
       height: {
