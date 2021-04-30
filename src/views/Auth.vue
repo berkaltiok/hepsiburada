@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center h-screen">
+  <div class="flex flex-col justify-center items-center min-h-screen">
     <router-link to="/" class="hidden md:block pt-10 pb-14">
       <Logo :height="28"/>
     </router-link>

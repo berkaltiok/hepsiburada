@@ -30,7 +30,9 @@ module.exports = {
       height: {
         "screen": "var(--app-height, 100vh)"
       },
-      minHeight: {},
+      minHeight: {
+        "screen": "var(--app-height, 100vh)"
+      },
       boxShadow: {
         "search": "0 0 4px 0 rgba(0, 0, 0, .16)",
         "searchMobile": "0 1px 2px 0 rgba(0, 0, 0, .12)",
