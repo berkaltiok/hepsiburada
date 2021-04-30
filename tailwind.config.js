@@ -4,14 +4,17 @@ for (let i = 1; i < 48; i++) {
 }
 
 module.exports = {
+  mode: 'jit',
   purge: [
-    './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.js',
+    './public/**/*.html',
+    './src/**/*.{js,jsx,ts,tsx,vue,html}',
   ],
   darkMode: "class",
   theme: {
     extend: {
+      margin: {
+        "1.3": "0.3125rem"
+      },
       fontSize: {
         "2xs": "11px"
       },
@@ -30,12 +33,14 @@ module.exports = {
         }
       },
       width: {
+        "15": "3.75rem",
         "29": "7.125rem",
         "1.3": "0.3125rem",
         ...grid48
       },
       height: {
-        "15": "3.75rem"
+        "15": "3.75rem",
+        "screen": "var(--app-height, 100vh)"
       },
       minHeight: {
         "12": "3rem",
@@ -44,7 +49,7 @@ module.exports = {
       boxShadow: {
         "search": "0 0 4px 0 rgba(0, 0, 0, .16)",
         "searchMobile": "0 1px 2px 0 rgba(0, 0, 0, .12)",
-        "categoryCard": "0 8px 32px 0 #eee",
+        "categoryCard": "0 8px 32px 0 rgba(238, 238, 238, 1)",
         "memberMenu": "0 2px 8px 0 rgba(72, 72, 72, .32)"
       },
       lineHeight: {
@@ -55,10 +60,6 @@ module.exports = {
       },
       zIndex: {
         "100": 100,
-      },
-      backgroundOpacity: {
-        "8": ".08",
-        '15': '0.15'
       },
       keyframes: {
         slideButton: {
