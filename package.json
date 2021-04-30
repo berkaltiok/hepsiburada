@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@tailwindcss/forms": "^0.3.2",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
     "vue-clickaway": "^2.2.2",
