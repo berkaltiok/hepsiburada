@@ -11,17 +11,18 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-        
+
       - name: Create Node Environment
         uses: actions/setup-node@v1
-        with: 
+        with:
           node-version: 14.x
 
       - name: Install Packages and Build Application
         run: |
-          npm install -g @vue/cli
-          npm install
-          npm run build
+          npm install -g yarn
+          yarn global add @vue/cli
+          yarn install
+          yarn build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
