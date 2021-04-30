@@ -1,9 +1,15 @@
 <template>
   <div class="flex flex-col justify-center items-center h-screen">
-    <router-link to="/" class="pt-10 pb-14">
-      <Logo height="28"/>
+    <router-link to="/" class="hidden md:block pt-10 pb-14">
+      <Logo :height="28"/>
     </router-link>
-    <div class="p-[4.5rem] rounded-lg border border-gray-200 w-full max-w-[30rem] my-auto">
+    <div class="p-6 md:p-[4.5rem] rounded-lg md:border border-gray-200 w-full max-w-[30rem] mb-auto md:my-auto">
+      <router-link to="/" class="md:hidden flex items-center justify-center mb-4 w-10 h-10 bg-gray-100 rounded-full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          <path fill="#484848" fill-rule="evenodd"
+                d="M.723 8.657c.001-.472.204-.921.557-1.234L8.933.676a.985.985 0 0 1 1.364.112.989.989 0 0 1-.064 1.37L4.321 7.37a.172.172 0 0 0 .113.3h11.715a.987.987 0 0 1 0 1.975H4.436a.172.172 0 0 0-.113.3l5.912 5.211a.988.988 0 0 1-.316 1.708.984.984 0 0 1-.984-.226L1.28 9.891a1.653 1.653 0 0 1-.558-1.234z"></path>
+        </svg>
+      </router-link>
       <div class="flex w-full rounded-[10px] bg-gray-100 p-0.5 mb-7">
         <template v-for="item in tab">
           <router-link
@@ -15,8 +21,12 @@
           </router-link>
         </template>
       </div>
-      <template v-if="$route.params.method === 'login'"></template>
-      <template v-if="$route.params.method === 'register'"></template>
+      <form v-show="$route.params.method === 'login'" method="post" action="#">
+        <button class="auth__button">Giriş yap</button>
+      </form>
+      <form v-show="$route.params.method === 'register'" method="post" action="#">
+        <button class="auth__button" disabled>Üye ol</button>
+      </form>
     </div>
     <div class="pt-10 pb-6 flex flex-col items-center justify-center">
       <div class="flex items-center">
@@ -60,6 +70,18 @@
   }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  .auth {
+    &__button {
+      @apply
+        rounded-lg select-none
+        bg-orange-500 hover:bg-orange-550
+        text-white text-base font-semibold
+        transition-colors duration-300
+        h-14 w-full
+        outline-none focus:outline-none
+        p-2
+        disabled:text-gray-400 disabled:bg-gray-300 disabled:cursor-not-allowed;
+    }
+  }
 </style>
