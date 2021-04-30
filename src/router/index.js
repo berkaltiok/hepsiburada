@@ -7,7 +7,20 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/Home.vue')
+    component: () => import('../views/Home.vue'),
+    meta: {
+      header: true,
+      footer: true
+    }
+  },
+  {
+    path: '/auth/:method',
+    name: 'Üye Girişi & Üye Ol',
+    component: () => import('../views/Auth.vue'),
+    meta: {
+      header: false,
+      footer: false
+    }
   }
 ]
 

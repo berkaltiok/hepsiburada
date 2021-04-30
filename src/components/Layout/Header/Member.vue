@@ -31,7 +31,7 @@
           <router-link
             :to="item.link"
             tag="button"
-            class="flex-1 bg-orange-500 bg-opacity-8 hover:bg-opacity-20 rounded-lg text-orange-500 h-10 tracking-tight font-semibold transition-all"
+            class="flex-1 bg-orange-500 bg-opacity-[.08] hover:bg-opacity-[.15] focus:bg-opacity-20 rounded-lg text-orange-500 h-10 tracking-tight font-semibold transition-all focus:outline-none outline-none"
           >
             {{ item.title }}
           </router-link>
@@ -167,11 +167,11 @@
           ],
           auth: [
             {
-              link: "#",
+              link: "/auth/register",
               title: "Üye Ol"
             },
             {
-              link: "#",
+              link: "/auth/login",
               title: "Giriş yap"
             }
           ]
