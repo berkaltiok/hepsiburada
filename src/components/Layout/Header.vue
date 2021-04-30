@@ -2,7 +2,7 @@
   <header class="w-full shadow select-none relative z-100">
     <div class="lg:h-24 p-2 lg:px-8 flex flex-wrap lg:flex-nowrap items-center">
       <!-- Logo -->
-      <a href="#" class="h-10 lg:h-6 mr-auto lg:mr-6 pl-2 py-2.5 lg:p-0"><Logo/></a>
+      <a href="#" class="h-10 lg:h-6 mr-auto lg:mr-6 pl-2 py-2.5 lg:p-0"><Logo class="w-[114px] md:w-auto"/></a>
       <!-- /Logo -->
 
       <!-- Category Button -->
