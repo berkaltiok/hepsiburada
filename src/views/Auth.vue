@@ -22,10 +22,37 @@
         </template>
       </div>
       <form v-show="$route.params.method === 'login'" method="post" action="#">
-        <button class="auth__button">Giriş yap</button>
+        <label for="login_email" class="mb-4 flex w-full">
+          <input class="auth__input" type="email" id="login_email" name="email" placeholder="E-posta adresi">
+        </label>
+        <label for="login_password" class="mb-8 flex w-full">
+          <input class="auth__input" type="password" id="login_password" name="password" placeholder="Şifre">
+        </label>
+        <button class="auth__button mb-5">Giriş yap</button>
+        <router-link to="/" class="text-orange-500 font-semibold text-sm">Şifremi unuttum</router-link>
       </form>
       <form v-show="$route.params.method === 'register'" method="post" action="#">
+        <div class="auth__line">E-posta adresi ile üye ol</div>
+        <div class="grid grid-flow-col auto-cols-auto gap-x-4 mb-4">
+          <label for="register_name" class="flex w-full">
+            <input class="auth__input" type="text" id="register_name" name="name" placeholder="Ad">
+          </label>
+          <label for="register_surname" class="flex w-full">
+            <input class="auth__input" type="text" id="register_surname" name="surname" placeholder="Soyad">
+          </label>
+        </div>
+        <label for="register_email" class="mb-4 flex w-full">
+          <input class="auth__input" type="email" id="register_email" name="email" placeholder="E-posta adresi">
+        </label>
+        <label for="register_password" class="mb-4 flex w-full">
+          <input class="auth__input" type="password" id="register_password" name="password" placeholder="Şifre">
+        </label>
+        <div class="flex mb-8">
+          <input id="accept" name="accept" type="checkbox" class="h-6 w-6 cursor-pointer rounded-lg border-2 border-gray-400 bg-white mr-4 !ring-0 checked:!bg-orange-500 !ring-transparent !shadow-none transition-colors duration-200">
+          <label for="accept" class="block text-sm text-gray-600 leading-5 cursor-pointer select-none">Önemli kampanyalardan haberdar olmak için <b class="hover:underline">Rıza Metni</b> kapsamında elektronik ileti almak istiyorum.</label>
+        </div>
         <button class="auth__button" disabled>Üye ol</button>
+        <div class="mt-4 text-[11px] text-gray-500 leading-[1.5]">Kişisel verileriniz, <b>Aydınlatma Metni</b> kapsamında işlenmektedir. "Üye ol" veya "Sosyal Hesap" butonlarından birine basarak <b>Üyelik Sözleşmesi</b>'ni, <b>Rıza Metni</b>'ni, <b>Çerez Politikası</b>'nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</div>
       </form>
     </div>
     <div class="pt-10 pb-6 flex flex-col items-center justify-center">
@@ -82,6 +109,24 @@
         outline-none focus:outline-none
         p-2
         disabled:text-gray-400 disabled:bg-gray-300 disabled:cursor-not-allowed;
+    }
+    &__input {
+      @apply
+        h-14 w-full ring-0
+        outline-none focus:outline-none
+        bg-gray-100 hover:bg-gray-50 focus:bg-white
+        transition-colors duration-200
+        rounded-lg text-gray-700
+        border-2 border-gray-100 focus:border-orange-500
+        p-[14px] placeholder-gray-500;
+    }
+    &__line {
+      @apply h-[40px] flex items-center text-gray-500 font-semibold text-sm mb-2;
+
+      &::after {
+        content: "";
+        @apply h-[1px] w-full ml-8 flex-1 bg-gray-200;
+      }
     }
   }
 </style>
