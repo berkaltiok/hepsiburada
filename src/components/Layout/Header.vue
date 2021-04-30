@@ -15,7 +15,7 @@
       <Actions class="hidden lg:flex"/>
 
       <!-- Profile -->
-      <Member class="ml-2 lg:ml-0"/>
+      <Member class="ml-2 lg:ml-0 z-30"/>
     </div>
     <div class="h-2 hidden lg:flex">
       <div class="w-[11%] h-full bg-purple-700"></div>

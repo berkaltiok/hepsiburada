@@ -15,7 +15,7 @@
       type="text"
       id="search"
       autocomplete="off"
-      class="w-full h-full focus:outline-none bg-transparent font-semibold text-gray-700 text-opacity-95 z-30"
+      class="w-full h-full focus:outline-none bg-transparent font-semibold text-gray-700 text-opacity-95 z-30 !ring-0 !border-0"
       :class="modal ? 'pl-3.5 pr-60 open text-2xl' : 'pl-12 pr-6 text-sm'"
       @keydown="inputFocusIn"
       @focusin="inputFocusIn"

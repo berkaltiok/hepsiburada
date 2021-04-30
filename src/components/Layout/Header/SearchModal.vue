@@ -17,7 +17,7 @@
                 tag="li"
                 role="option"
                 aria-selected="false"
-                class="group flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
+                class="group flex w-full py-2 px-4 bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
               >
                 <span class="text-gray-700 text-opacity-95 text-sm leading-4" v-html="highlightText(value, list.name)"/>
                 <i class="icon icon-arrowRight mx-2 mt-0.5"></i>
@@ -31,7 +31,7 @@
               tag="li"
               role="option"
               aria-selected="false"
-              class="flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
+              class="flex w-full py-2 px-4 bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
             >
               <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4" v-html="highlightText(value, item.name)"/>
               <span class="ml-8 text-gray-500 text-opacity-80 leading-4 font-semibold text-xs">Marka</span>
@@ -43,7 +43,7 @@
               tag="li"
               role="option"
               aria-selected="false"
-              class="flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
+              class="flex w-full py-2 px-4 bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
             >
               <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4" v-html="highlightText(value, item.name)"/>
             </router-link>
@@ -54,7 +54,7 @@
               tag="li"
               role="option"
               aria-selected="false"
-              class="flex w-full py-2 px-4 rounded-none bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
+              class="flex w-full py-2 px-4 bg-white rounded-full hover:bg-gray-100 transition-all flex items-center cursor-pointer"
             >
               <span class="text-gray-700 text-opacity-95 text-sm flex-1 leading-4">{{ item.name }}</span>
               <span class="ml-8 text-gray-500 text-opacity-80 leading-4 font-semibold text-xs">{{ item.label }}</span>
