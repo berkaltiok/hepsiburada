@@ -38,10 +38,15 @@ yarn build
 ```
 
 # Planned Features
-- [x] New Header
-- [ ] Product Cards
-- [ ] Home Slider
-- [ ] Footer
+- [ ] Layout
+  - [x] New Header
+  - [ ] Footer
+- [ ] Home
+    - [ ] Product Cards
+    - [ ] Home Slider
+- [ ] Auth
+    - [ ] Login
+    - [ ] Register
 
 # Contributing
 
