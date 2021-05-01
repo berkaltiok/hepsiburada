@@ -3,7 +3,7 @@
     <router-link to="/" class="hidden md:block pt-10 pb-14">
       <Logo :height="28"/>
     </router-link>
-    <div class="p-6 md:p-[4.5rem] rounded-lg md:border border-gray-200 w-full max-w-[30rem] mb-auto md:my-auto">
+    <div class="p-6 md:p-[4.5rem] rounded-lg md:border border-gray-200 w-full max-w-[30rem] md:mt-auto">
       <router-link to="/" class="md:hidden flex items-center justify-center mb-4 w-10 h-10 bg-gray-100 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
           <path fill="#484848" fill-rule="evenodd"
@@ -55,6 +55,20 @@
         <div class="mt-4 text-[11px] text-gray-500 leading-[1.5]">Kişisel verileriniz, <b>Aydınlatma Metni</b> kapsamında işlenmektedir. "Üye ol" veya "Sosyal Hesap" butonlarından birine basarak <b>Üyelik Sözleşmesi</b>'ni, <b>Rıza Metni</b>'ni, <b>Çerez Politikası</b>'nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</div>
       </form>
     </div>
+    <div class="px-6 md:px-0 mt-6 mb-auto">
+      <div class="auth__social">
+        <div class="leading-[30px] text-xl text-gray-600 font-semibold mb-0.5">Sosyal hesap ile giriş yap</div>
+        <div class="text-sm text-gray-600">Hepsiburada'ya şifresiz giriş yapabilmek için Google, Apple veya Facebook hesabınızı bağlayabilirsiniz.</div>
+        <div class="grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 mt-6 gap-4">
+          <template v-for="item in social">
+            <router-link :to="item.link" class="w-full h-[50px] md:h-14 flex items-center justify-center border-2 border-gray-300 rounded-lg p-2 text-gray-600 hover:text-orange-500 hover:bg-gray-50 transition-colors duration-200">
+              <img :src="require('../assets/images/auth/' + item.icon)" :alt="item.title" class="mr-[5px]">
+              <span class="text-xs font-semibold pt-[1px]">{{ item.title }}</span>
+            </router-link>
+          </template>
+        </div>
+      </div>
+    </div>
     <div class="pt-10 pb-6 flex flex-col items-center justify-center">
       <div class="flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="21" viewBox="0 0 18 21">
@@ -88,6 +102,23 @@
         tab: [
           { link: "login", title: "Giriş yap" },
           { link: "register", title: "Üye ol" }
+        ],
+        social: [
+          {
+            link: "/",
+            title: "Google",
+            icon: "google.svg"
+          },
+          {
+            link: "/",
+            title: "Apple",
+            icon: "apple.svg"
+          },
+          {
+            link: "/",
+            title: "Facebook",
+            icon: "facebook.svg"
+          }
         ]
       }
     },
@@ -127,6 +158,11 @@
         content: "";
         @apply h-[1px] w-full ml-8 flex-1 bg-gray-200;
       }
+    }
+    &__social {
+      @apply p-8 max-w-[30rem] rounded-lg border border-gray-200 w-full text-center;
+      background: url('../assets/images/auth/background.svg') no-repeat;
+      background-size: 100%;
     }
   }
 </style>
