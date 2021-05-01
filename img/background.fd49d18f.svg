@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 470 128" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd" opacity=".6">
+        <path transform="rotate(180 235 77)" d="M0 26c12.052 64.913 52.565 97.37 121.539 97.37S252.667 135.58 308 160H0V26z" fill="#6C84FA" fill-opacity=".1"/>
+        <path transform="rotate(180 235 77)" d="M0 70.48C41.24 89.58 104.074 99.129 188.5 99.129S366.76 119.418 470 160H0V70.48z" fill="#FF6000" fill-opacity=".1"/>
+        <path transform="rotate(180 235 77) matrix(-1 0 0 1 486 0)" d="M8 70.48c24.24 39.183 78.574 58.773 163 58.773S357.76 139.503 478 160H8V70.48z" fill="#5AD363" fill-opacity=".106"/>
+    </g>
+</svg>
