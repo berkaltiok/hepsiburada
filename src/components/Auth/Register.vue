@@ -17,7 +17,9 @@
     </label>
     <div class="flex mb-8">
       <input id="accept" name="accept" type="checkbox" class="form-checkbox h-6 w-6 cursor-pointer rounded-lg border-2 border-gray-400 bg-white mr-4 !ring-0 checked:!bg-orange-500 !ring-transparent !shadow-none transition-colors duration-200">
-      <label for="accept" class="block text-sm text-gray-600 leading-5 cursor-pointer select-none">Önemli kampanyalardan haberdar olmak için <b class="hover:underline">Rıza Metni</b> kapsamında elektronik ileti almak istiyorum.</label>
+      <div class="flex-auto">
+        <label class="text-sm leading-5 cursor-text">Önemli kampanyalardan haberdar olmak için <strong class="cursor-pointer hover:text-orange-500 hover:bg-gray-50">Rıza Metni</strong> kapsamında elektronik ileti almak istiyorum.</label>
+      </div>
     </div>
     <button class="btn btn-primary" disabled>Üye ol</button>
     <div class="mt-4 text-[11px] text-gray-500 leading-[1.5]">Kişisel verileriniz, <b>Aydınlatma Metni</b> kapsamında işlenmektedir. "Üye ol" veya "Sosyal Hesap" butonlarından birine basarak <b>Üyelik Sözleşmesi</b>'ni, <b>Rıza Metni</b>'ni, <b>Çerez Politikası</b>'nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</div>
