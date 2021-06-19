@@ -9,7 +9,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      fontSize: {},
+      transitionProperty: {
+        'width': 'width'
+      },
       colors: {
         orange: {
           '50':  '#fbf7f2',
@@ -24,9 +26,20 @@ module.exports = {
           '800': '#a52820',
           '900': '#84211e',
         },
+        green: {
+          '50':  '#f2f6f2',
+          '100': '#dff0e2',
+          '200': '#b4e7be',
+          '300': '#78cc8a',
+          '400': '#439e4a',
+          '500': '#229333',
+          '600': '#1d7d24',
+          '700': '#1b601f',
+          '800': '#144119',
+          '900': '#0e2815',
+        },
         gray: colors.warmGray
       },
-      width: {},
       height: {
         "screen": "var(--app-height, 100vh)"
       },
@@ -39,7 +52,6 @@ module.exports = {
         "categoryCard": "0 8px 32px 0 rgba(238, 238, 238, 1)",
         "memberMenu": "0 2px 8px 0 rgba(72, 72, 72, .32)"
       },
-      lineHeight: {},
       flex: {
         "full": "0 0 100%"
       },
@@ -75,6 +87,9 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms')
+    require('@tailwindcss/line-clamp'),
+    require('@tailwindcss/forms')({
+      strategy: 'class'
+    })
   ],
 }
