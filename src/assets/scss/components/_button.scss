@@ -1,0 +1,16 @@
+.btn {
+  @apply
+    flex items-center justify-center
+    rounded-lg select-none
+    text-base font-semibold
+    transition-colors duration-300
+    h-14 w-full p-2
+    outline-none focus:outline-none;
+
+  &-primary {
+    @apply bg-orange-500 hover:bg-orange-550 text-white;
+  }
+  &[disabled], .disabled {
+    @apply text-gray-400 bg-gray-300 cursor-not-allowed;
+  }
+}

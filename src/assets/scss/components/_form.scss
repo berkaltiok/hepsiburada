@@ -1,0 +1,26 @@
+.form {
+  &-help {
+    @apply flex flex-col;
+
+    span {
+      @apply text-xs text-red-400 pt-2 pl-2;
+    }
+  }
+  &-group {
+    @apply flex flex-col w-full mb-4;
+  }
+  &-control {
+    @apply
+      h-14 w-full ring-0
+      outline-none focus:outline-none
+      bg-gray-100 hover:bg-gray-50 focus:bg-white
+      transition-all duration-200
+      rounded-lg text-gray-700
+      border-2 border-gray-100 focus:border-orange-500
+      p-[14px] placeholder-gray-500;
+
+    &-error {
+      @apply border-red-400 bg-red-50 placeholder-red-500;
+    }
+  }
+}
