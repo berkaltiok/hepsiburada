@@ -123,6 +123,16 @@
       return {
         menu: {
           isOpen: false,
+          auth: [
+            {
+              link: "/auth/register",
+              title: "Üye Ol"
+            },
+            {
+              link: "/auth/login",
+              title: "Giriş yap"
+            }
+          ],
           links: [
             {
               link: "#",
@@ -161,20 +171,10 @@
               title: "Mesajlarım"
             },
             {
-              link: "#",
+              link: "/help",
               title: "Çözüm Merkezi"
             }
           ],
-          auth: [
-            {
-              link: "/auth/register",
-              title: "Üye Ol"
-            },
-            {
-              link: "/auth/login",
-              title: "Giriş yap"
-            }
-          ]
         }
       }
     },
