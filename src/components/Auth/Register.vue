@@ -16,10 +16,10 @@
       <input class="form-control" type="password" id="register_password" name="password" placeholder="Şifre">
     </label>
     <div class="flex mb-8">
-      <input id="accept" name="accept" type="checkbox" class="form-checkbox h-6 w-6 cursor-pointer rounded-lg border-2 border-gray-400 bg-white mr-4 !ring-0 checked:!bg-orange-500 !ring-transparent !shadow-none transition-colors duration-200">
-      <div class="flex-auto">
-        <label class="text-sm leading-5 cursor-text">Önemli kampanyalardan haberdar olmak için <strong class="cursor-pointer hover:text-orange-500 hover:bg-gray-50">Rıza Metni</strong> kapsamında elektronik ileti almak istiyorum.</label>
-      </div>
+      <label for="accept">
+        <input id="accept" name="accept" type="checkbox" class="form-checkbox h-6 w-6 cursor-pointer rounded-lg border-2 border-gray-400 bg-white mr-4 !ring-0 checked:!bg-orange-500 !ring-transparent !shadow-none transition-colors duration-200">
+      </label>
+      <div class="text-sm leading-5 cursor-text">Önemli kampanyalardan haberdar olmak için <strong class="cursor-pointer hover:text-orange-500 hover:bg-gray-50">Rıza Metni</strong> kapsamında elektronik ileti almak istiyorum.</div>
     </div>
     <button class="btn btn-primary" disabled>Üye ol</button>
     <div class="mt-4 text-[11px] text-gray-500 leading-[1.5]">Kişisel verileriniz, <b>Aydınlatma Metni</b> kapsamında işlenmektedir. "Üye ol" veya "Sosyal Hesap" butonlarından birine basarak <b>Üyelik Sözleşmesi</b>'ni, <b>Rıza Metni</b>'ni, <b>Çerez Politikası</b>'nı okuduğunuzu ve kabul ettiğinizi onaylıyorsunuz.</div>
