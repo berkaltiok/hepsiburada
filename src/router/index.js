@@ -16,11 +16,20 @@ const routes = [
   {
     path: '/auth/:method',
     name: 'Üye Girişi & Üye Ol',
-    component: () => import('../views/Auth.vue'),
     meta: {
       header: false,
       footer: false
-    }
+    },
+    component: () => import('../views/Auth.vue')
+  },
+  {
+    path: '/category/:slug',
+    name: 'Ürün Listesi',
+    meta: {
+      header: true,
+      footer: true
+    },
+    component: () => import('../views/Category')
   }
 ]
 
