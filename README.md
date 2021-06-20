@@ -40,13 +40,18 @@ yarn build
 # Planned Features
 - [ ] Layout
   - [x] New Header
+  - [x] Breadcrumb
   - [ ] Footer
 - [ ] Home
     - [ ] Product Cards
     - [ ] Home Slider
-- [ ] Auth
-    - [ ] Login
-    - [ ] Register
+- [ ] Category & Product List
+  - [ ] Product Cards
+  - [ ] Fast Delivery
+  - [ ] Filter
+- [x] Auth
+    - [x] Login
+    - [x] Register
 
 # Contributing
 
