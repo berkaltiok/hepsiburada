@@ -75,9 +75,9 @@
                 </li>
                 <router-link
                   v-else
-                  to="#"
+                  to="/category"
                   tag="li"
-                  class="categoryItem min-h-12 py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
+                  class="categoryItem min-h-[3rem] py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
                 >{{ item.title }}</router-link>
               </template>
             </ul>

@@ -23,7 +23,7 @@ const routes = [
     component: () => import('../views/Auth.vue')
   },
   {
-    path: '/category/:slug',
+    path: '/category/:slug?',
     name: 'Ürün Listesi',
     meta: {
       header: true,
