@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header v-if="layout.header"/>
+    <Header v-if="layout.header" :bar="layout.bar"/>
     <router-view/>
   </div>
 </template>
@@ -15,6 +15,7 @@
         bars: false,
         layoutBase: {
           header: false,
+          bar: true,
           footer: false
         },
         layout: {}

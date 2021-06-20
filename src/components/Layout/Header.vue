@@ -16,13 +16,13 @@
       <!-- Profile -->
       <Member class="ml-2 lg:ml-0 z-30"/>
     </div>
-    <div class="h-2 hidden lg:flex">
-      <div class="w-[11%] h-full bg-purple-700"></div>
-      <div class="w-[18%] bg-blue-400"></div>
-      <div class="w-[31%] bg-orange-500"></div>
-      <div class="w-[15%] h-full bg-yellow-500"></div>
-      <div class="w-[13%] h-full bg-pink-900"></div>
-      <div class="w-[12%] h-full bg-green-400"></div>
+    <div class="h-2 hidden lg:flex" v-if="bar">
+      <div class="w-[11%] h-full bg-[#7622da]"></div>
+      <div class="w-[18%] h-full bg-[#47c6eb]"></div>
+      <div class="w-[31%] h-full bg-orange-500"></div>
+      <div class="w-[15%] h-full bg-[#f59f28]"></div>
+      <div class="w-[13%] h-full bg-[#6b1e5b]"></div>
+      <div class="w-[12%] h-full bg-[#45b794]"></div>
     </div>
   </header>
 </template>
@@ -41,6 +41,12 @@
       Search,
       Actions,
       Member
+    },
+    props: {
+      bar: {
+        type: Boolean,
+        default: true
+      },
     },
   }
 </script>
