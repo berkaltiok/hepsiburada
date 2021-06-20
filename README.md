@@ -46,7 +46,7 @@ yarn build
     - [ ] Product Cards
     - [ ] Home Slider
 - [ ] Category & Product List
-  - [ ] Product Cards
+  - [x] Product Cards
   - [ ] Fast Delivery
   - [ ] Filter
 - [x] Auth
