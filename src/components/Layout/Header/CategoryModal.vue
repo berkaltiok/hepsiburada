@@ -73,12 +73,11 @@
                     :class="{'hovered' : step.active === key }"
                   ></i>
                 </li>
-                <router-link
+                <li
                   v-else
-                  to="/category"
-                  tag="li"
+                  @click="openCategory"
                   class="categoryItem min-h-[3rem] py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
-                >{{ item.title }}</router-link>
+                >{{ item.title }}</li>
               </template>
             </ul>
           </template>
@@ -183,6 +182,10 @@ export default {
   methods: {
     closeModal() {
       this.$emit("close", true);
+    },
+    openCategory() {
+      this.closeModal();
+      this.$router.push("/category").catch(() => {});
     },
     selectCategory(step, select) {
       let stepList = this.steps;
