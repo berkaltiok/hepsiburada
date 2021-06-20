@@ -42,16 +42,17 @@ yarn build
   - [x] New Header
   - [x] Breadcrumb
   - [ ] Footer
-- [ ] Home
+- [ ] [Home](https://hepsiburada.js.org)
     - [ ] Product Cards
     - [ ] Home Slider
-- [ ] Category & Product List
+- [ ] [Category & Product List](https://hepsiburada.js.org/category)
   - [x] Product Cards
   - [ ] Fast Delivery
   - [ ] Filter
 - [x] Auth
-    - [x] Login
-    - [x] Register
+    - [x] [Login](https://hepsiburada.js.org/auth/login)
+    - [x] [Register](https://hepsiburada.js.org/auth/register)
+    - [x] [Forgot My Password](#)
 
 # Contributing
 
