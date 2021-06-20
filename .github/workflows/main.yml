@@ -23,12 +23,7 @@ jobs:
           yarn global add @vue/cli
           yarn install
           yarn build
-
-      - name: Create 404.html File
-        uses: canastro/copy-file-action@master
-        with:
-          source: "index.html"
-          target: "404.html"
+          cd dist && cp index.html 404.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
