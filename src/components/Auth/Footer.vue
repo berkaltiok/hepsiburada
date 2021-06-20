@@ -11,6 +11,6 @@
       </svg>
       <div class="ml-[11px] text-green-400 text-[11px] font-bold">Güvenli alışveriş</div>
     </div>
-    <div class="text-[11px] mt-3 text-gray-600 tracking-[.2px]">© Copyright 2021 <router-link to="/">HepsiBurada Özgür Ticaret</router-link></div>
+    <div class="text-[11px] mt-3 text-gray-600 tracking-[.2px]">© Copyright 2021 <router-link to="/">HepsiŞurada Özgür Ticaret</router-link></div>
   </div>
 </template>
