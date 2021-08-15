@@ -52,7 +52,7 @@ yarn build
 - [x] Auth
     - [x] [Login](https://hepsiburada.js.org/auth/login)
     - [x] [Register](https://hepsiburada.js.org/auth/register)
-    - [x] [Forgot My Password](#)
+    - [ ] Forgot My Password
 
 # Contributing
 
