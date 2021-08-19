@@ -10,6 +10,9 @@
       <!-- Search -->
       <Search class="flex-auto lg:flex-1 order-last lg:order-none"/>
 
+      <!-- Location -->
+      <Location class="ml-2 lg:ml-0 z-30"/>
+
       <!-- Actions -->
       <Actions class="hidden lg:flex"/>
 
@@ -33,6 +36,7 @@
   import Member from "@/components/Layout/Header/Member";
   import Actions from "@/components/Layout/Header/Actions";
   import Category from "@/components/Layout/Header/Category";
+  import Location from "@/components/Layout/Header/Location";
 
   export default {
     components: {
@@ -40,7 +44,8 @@
       Category,
       Search,
       Actions,
-      Member
+      Member,
+      Location
     },
     props: {
       bar: {
