@@ -25,7 +25,7 @@
     >
     <div
       v-show="!input"
-      class="pl-12 absolute z-0 h-full top-0 left-0 flex items-center text-sm text-gray-400 w-38 orange-500 w-full overflow-hidden"
+      class="pl-12 absolute z-0 h-full top-0 left-0 flex items-center text-sm text-gray-400 w-full overflow-hidden"
     >
       <span class="whitespace-nowrap">Ürün, kategori veya marka ara</span>
     </div>
