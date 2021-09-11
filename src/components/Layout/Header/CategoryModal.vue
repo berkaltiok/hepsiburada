@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed w-full h-screen z-100 bg-white left-0 top-0">
+  <div class="fixed w-full h-screen z-[100] bg-white left-0 top-0">
     <!-- Modal Header -->
     <div class="h-24 px-6 flex" :class="{ 'border-b border-gray-200' : steps.step1.active !== null }">
       <div
