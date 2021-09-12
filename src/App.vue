@@ -53,16 +53,15 @@
       $route(to, from) {
         this.layout = {...this.layoutBase, ...to.meta}
       }
-    },
-    metaInfo: {
-      title: "Türkiye'nin En Büyük Online Alışveriş Teması",
-      titleTemplate: '%s - Hepsişurada'
     }
   }
 </script>
 
 <style lang="scss">
-  @import "./assets/scss/main";
+  @tailwind base;
+  @tailwind components;
+
+@import "./assets/scss/main";
 
   .fade-enter-active,
   .fade-leave-active {
@@ -75,4 +74,15 @@
   .fade-leave-active {
     opacity: 0
   }
+
+  .transition {
+    &-search {
+      transition-property: background-color, border-color, color, fill, stroke, box-shadow;
+    }
+    &-all, &-shadow, &-colors, &-search {
+      transition-timing-function: ease-in-out;
+      transition-duration: .15s;
+    }
+  }
+  @tailwind utilities;
 </style>

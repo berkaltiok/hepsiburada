@@ -3,17 +3,18 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// Import Tailwind CSS
-import "./assets/scss/tailwind.scss"
+// Vue Meta Mask
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
 
 Vue.config.productionTip = false
-
-import VueMeta from 'vue-meta'
-
-Vue.use(VueMeta)
 
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  metaInfo: {
+    title: "Türkiye'nin En Büyük Online Alışveriş Teması",
+    titleTemplate: '%s - Hepsişurada'
+  }
 }).$mount('#app')

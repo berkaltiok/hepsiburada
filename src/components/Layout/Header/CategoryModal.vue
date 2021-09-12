@@ -21,7 +21,7 @@
       </div>
       <div class="flex flex-wrap justify-center mt-10">
         <template v-for="(item, key) in steps.step1.list">
-          <div class="w-1/5 px-2.5 mb-5" @click="selectCategory(1, key)">
+          <div class="w-1/5 px-2.5 mb-5" @click="selectCategory(1, key)" :key="key">
             <div class="flex flex-col items-center p-4 w-full rounded-lg shadow-categoryCard border-2 border-transparent hover:border-orange-500 transition-colors cursor-pointer">
               <img class="w-24 h-24 object-center object-cover" :src="require(`../../../assets/media/category/${item.image}`)" :alt="item.title">
               <span class="h-8 text-sm font-semibold text-gray-600 w-full flex justify-center items-center text-center">{{ item.title }}</span>
@@ -32,13 +32,14 @@
     </div>
     <div class="mx-6 flex h-full" v-else>
       <template v-for="(step, stepKey, index) in steps">
-        <div class="mt-4 w-56 h-full">
+        <div class="mt-4 w-56 h-full" :key="index">
           <ul class="h-full border-r border-gray-100" v-if="step.type === 'mainCategory'">
             <template v-for="(item, key) in step.list">
               <li
                 class="categoryList relative cursor-pointer flex items-center py-1 pr-3 mb-2 transition-all"
                 :class="step.active === key ? 'text-orange-500 active' : 'text-gray-700 hover:text-orange-500'"
                 @click="selectCategory(1, key)"
+                :key="key"
               >
                 <img class="w-10 h-10 object-center object-cover" :src="require(`../../../assets/media/category/${item.image}`)" :alt="item.title">
                 <span class="ml-3 text-sm font-semibold leading-4 w-full">{{ item.title }}</span>
@@ -48,7 +49,7 @@
           <template v-if="step.type !== 'mainCategory' && steps['step'+index].active !== null">
             <div class="min-h-[3.75rem] font-bold text-lg flex items-center pl-6 pr-4 text-gray-600 leading-5">
               {{ steps['step'+index].list[steps['step'+index].active].title }}
-              <i class="icon icon-rightAngle w-2 ml-auto flex-none ml-2"></i>
+              <i class="icon icon-rightAngle w-2 ml-auto flex-none"></i>
             </div>
             <ul class="w-full px-2 pb-2 border-r border-gray-100 h-full">
               <router-link
@@ -66,6 +67,7 @@
                   class="categoryItem min-h-[3rem] py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
                   :class="{'text-orange-500 bg-orange-500 bg-opacity-10' : step.active === key }"
                   @click="selectCategory(index + 1, key)"
+                  :key="key"
                 >
                   {{ item.title }}
                   <i
@@ -76,6 +78,7 @@
                 <li
                   v-else
                   @click="openCategory"
+                  :key="key"
                   class="categoryItem min-h-[3rem] py-1 pl-4 pr-2.5 flex items-center text-sm text-gray-700 hover:text-orange-500 cursor-pointer bg-white rounded-lg leading-snug transition-all"
                 >{{ item.title }}</li>
               </template>
