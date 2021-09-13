@@ -55,7 +55,7 @@
         this.modal = true;
       },
       inputFocusOut() {
-        this.$refs.searchBar.focus();
+        if (this.modal) this.$refs.searchBar.focus();
         this.modal = false;
       },
       inputFocus() {
