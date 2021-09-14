@@ -143,8 +143,10 @@
         if (this.slider[this.active.category].items[this.active.item + 1]) {
           this.active.item++;
         } else {
-          if (this.slider[this.active.category + 1]) this.active.category++;
-          this.changeItem(0);
+          if (this.slider[this.active.category + 1]) {
+            this.active.category++;
+            this.changeItem(0);
+          }
         }
       },
       nextItem() {
