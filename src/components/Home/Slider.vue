@@ -115,7 +115,7 @@
       startAutoplay() {
         this.timer = setInterval(() => {
           this.nextEvent()
-        }, 6000000)
+        }, 6000)
       },
       stopAutoplay() {
         clearInterval(this.timer);
