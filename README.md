@@ -43,8 +43,8 @@ yarn build
   - [x] Breadcrumb
   - [ ] Footer
 - [ ] [Home](https://hepsiburada.js.org)
+    - [x] Home Slider
     - [ ] Product Cards
-    - [ ] Home Slider
 - [ ] [Category & Product List](https://hepsiburada.js.org/category)
   - [x] Product Cards
   - [ ] Fast Delivery
