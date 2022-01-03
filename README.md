@@ -3,7 +3,7 @@
   Hepsiburada.com clone in VueJS / TailwindCSS / CSS.
 </p>
 <p align="center">
-  <img src="https://img.shields.io/maintenance/yes/2021?style=for-the-badge" alt="Maintained">
+  <img src="https://img.shields.io/maintenance/yes/2022?style=for-the-badge" alt="Maintained">
   <a href="https://github.com/berkaltiok/hepsiburada/blob/dev/LICENSE"><img src="https://img.shields.io/github/license/berkaltiok/hepsiburada?sanitize=true&style=for-the-badge" alt="License"></a>
 </p>
 
